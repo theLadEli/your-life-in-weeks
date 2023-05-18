@@ -6,16 +6,34 @@
     <title>Your life in weeks</title>
 
     <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
 
     <!-- Customised Social Sharing -->
     <meta property="og:title" content="Your life in weeks">
     <meta property="og:description" content="How many weeks do you have left?">
     <meta property="og:image" content="https://github.com/theLadEli/your-life-in-weeks/blob/main/social-share-image.jpeg?raw=true">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Your Life in Weeks</h1>
-    <p>How many weeks do you have left?</p>
 
-    <div id="results"></div>
+    <div id="container">
+        <h1>Your Life in Weeks</h1>
+        <p>🪦 How many weeks do you have left?</p>
+    
+        <form onsubmit="getWeeksLeft()">
+            <label for="ageInYears">How old are you?</label>
+            <input type="number" name="ageInYears" id="ageInYears" required>
+    
+            <input type="submit" value="Submit">
+        </form>
+    
+        <div id="results"></div>
+    </div>
+    
+
+<script src="script.js"></script>
 </body>
 </html>
